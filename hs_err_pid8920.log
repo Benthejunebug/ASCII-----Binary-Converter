@@ -1,0 +1,156 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 232 bytes for symbol
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:58), pid=8920, tid=9328
+#
+# JRE version: 7.0_02-b13
+# Java VM: Java HotSpot(TM) Client VM (22.0-b10 mixed mode, sharing windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00a19400):  JavaThread "main" [_thread_in_vm, id=9328, stack(0x00940000,0x00990000)]
+
+Stack: [0x00940000,0x00990000],  sp=0x0098e710,  free space=313k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.font.FontDesignMetrics.getMetrics(Ljava/awt/Font;Ljava/awt/font/FontRenderContext;)Lsun/font/FontDesignMetrics;+0
+j  sun.swing.SwingUtilities2.getFontMetrics(Ljavax/swing/JComponent;Ljava/awt/Font;)Ljava/awt/FontMetrics;+15
+j  javax.swing.JComponent.getFontMetrics(Ljava/awt/Font;)Ljava/awt/FontMetrics;+2
+j  javax.swing.text.PlainView.calculateLongestLine()V+19
+j  javax.swing.text.PlainView.updateMetrics()V+19
+j  javax.swing.text.PlainView.updateDamage(Ljavax/swing/event/DocumentEvent;Ljava/awt/Shape;Ljavax/swing/text/ViewFactory;)V+7
+j  javax.swing.text.PlainView.insertUpdate(Ljavax/swing/event/DocumentEvent;Ljava/awt/Shape;Ljavax/swing/text/ViewFactory;)V+4
+j  javax.swing.text.FieldView.insertUpdate(Ljavax/swing/event/DocumentEvent;Ljava/awt/Shape;Ljavax/swing/text/ViewFactory;)V+8
+j  javax.swing.plaf.basic.BasicTextUI$RootView.insertUpdate(Ljavax/swing/event/DocumentEvent;Ljava/awt/Shape;Ljavax/swing/text/ViewFactory;)V+14
+j  javax.swing.plaf.basic.BasicTextUI$UpdateHandler.insertUpdate(Ljavax/swing/event/DocumentEvent;)V+101
+j  javax.swing.text.AbstractDocument.fireInsertUpdate(Ljavax/swing/event/DocumentEvent;)V+40
+j  javax.swing.text.AbstractDocument.handleInsertString(ILjava/lang/String;Ljavax/swing/text/AttributeSet;)V+150
+j  javax.swing.text.AbstractDocument.insertString(ILjava/lang/String;Ljavax/swing/text/AttributeSet;)V+46
+j  javax.swing.text.PlainDocument.insertString(ILjava/lang/String;Ljavax/swing/text/AttributeSet;)V+104
+j  javax.swing.text.AbstractDocument.replace(IILjava/lang/String;Ljavax/swing/text/AttributeSet;)V+74
+j  javax.swing.text.JTextComponent.setText(Ljava/lang/String;)V+25
+j  javax.swing.JTextField.<init>(Ljavax/swing/text/Document;Ljava/lang/String;I)V+77
+j  javax.swing.JTextField.<init>(Ljava/lang/String;)V+4
+j  GUI.<init>()V+40
+j  run.main([Ljava/lang/String;)V+3
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00b1ec00 JavaThread "AWT-Windows" daemon [_thread_in_native, id=3984, stack(0x04ab0000,0x04b00000)]
+  0x047f2400 JavaThread "AWT-Shutdown" [_thread_blocked, id=8544, stack(0x012a0000,0x012f0000)]
+  0x00b1e000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=8512, stack(0x01240000,0x01290000)]
+  0x00ae5000 JavaThread "Service Thread" daemon [_thread_blocked, id=4448, stack(0x00e10000,0x00e60000)]
+  0x00ad8c00 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=8320, stack(0x01000000,0x01050000)]
+  0x00ad7800 JavaThread "Attach Listener" daemon [_thread_blocked, id=8704, stack(0x00d60000,0x00db0000)]
+  0x00ad4800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=6628, stack(0x00e60000,0x00eb0000)]
+  0x00ac5c00 JavaThread "Finalizer" daemon [_thread_blocked, id=6560, stack(0x00cf0000,0x00d40000)]
+  0x00ac1000 JavaThread "Reference Handler" daemon [_thread_blocked, id=224, stack(0x00c80000,0x00cd0000)]
+=>0x00a19400 JavaThread "main" [_thread_in_vm, id=9328, stack(0x00940000,0x00990000)]
+
+Other Threads:
+  0x00abec00 VMThread [stack: 0x009a0000,0x009f0000] [id=4016]
+  0x00ae7000 WatcherThread [stack: 0x01060000,0x010b0000] [id=8460]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4928K, used 747K [0x246a0000, 0x24bf0000, 0x29bf0000)
+  eden space 4416K,  16% used [0x246a0000, 0x2475ac48, 0x24af0000)
+  from space 512K,   0% used [0x24af0000, 0x24af0000, 0x24b70000)
+  to   space 512K,   0% used [0x24b70000, 0x24b70000, 0x24bf0000)
+ tenured generation   total 10944K, used 0K [0x29bf0000, 0x2a6a0000, 0x346a0000)
+   the space 10944K,   0% used [0x29bf0000, 0x29bf0000, 0x29bf0200, 0x2a6a0000)
+ compacting perm gen  total 12288K, used 380K [0x346a0000, 0x352a0000, 0x386a0000)
+   the space 12288K,   3% used [0x346a0000, 0x346ff250, 0x346ff400, 0x352a0000)
+    ro space 10240K,  42% used [0x386a0000, 0x38add448, 0x38add600, 0x390a0000)
+    rw space 12288K,  54% used [0x390a0000, 0x3971e0c0, 0x3971e200, 0x39ca0000)
+
+Code Cache  [0x027f0000, 0x02890000, 0x047f0000)
+ total_blobs=204 nmethods=29 adapters=111 free_code_cache=32130Kb largest_free_block=32901824
+
+Dynamic libraries:
+0x013c0000 - 0x013ef000 	C:\Program Files (x86)\Java\jre7\bin\javaw.exe
+0x76f20000 - 0x770a0000 	C:\Windows\SysWOW64\ntdll.dll
+0x74af0000 - 0x74bf0000 	C:\Windows\syswow64\kernel32.dll
+0x74f10000 - 0x74f56000 	C:\Windows\syswow64\KERNELBASE.dll
+0x76270000 - 0x76310000 	C:\Windows\syswow64\ADVAPI32.dll
+0x75250000 - 0x752fc000 	C:\Windows\syswow64\msvcrt.dll
+0x74f60000 - 0x74f79000 	C:\Windows\SysWOW64\sechost.dll
+0x768c0000 - 0x769b0000 	C:\Windows\syswow64\RPCRT4.dll
+0x74a90000 - 0x74af0000 	C:\Windows\syswow64\SspiCli.dll
+0x74a80000 - 0x74a8c000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x75440000 - 0x75540000 	C:\Windows\syswow64\USER32.dll
+0x74f80000 - 0x75010000 	C:\Windows\syswow64\GDI32.dll
+0x74cf0000 - 0x74cfa000 	C:\Windows\syswow64\LPK.dll
+0x75580000 - 0x7561d000 	C:\Windows\syswow64\USP10.dll
+0x729c0000 - 0x72b5e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16385_none_421189da2b7fabfc\COMCTL32.dll
+0x76310000 - 0x76367000 	C:\Windows\syswow64\SHLWAPI.dll
+0x74eb0000 - 0x74f10000 	C:\Windows\system32\IMM32.DLL
+0x75180000 - 0x7524c000 	C:\Windows\syswow64\MSCTF.dll
+0x6a440000 - 0x6a4fe000 	C:\Program Files (x86)\Java\jre7\bin\msvcr100.dll
+0x69ea0000 - 0x6a1c8000 	C:\Program Files (x86)\Java\jre7\bin\client\jvm.dll
+0x733a0000 - 0x733a7000 	C:\Windows\system32\WSOCK32.dll
+0x76780000 - 0x767b5000 	C:\Windows\syswow64\WS2_32.dll
+0x75540000 - 0x75546000 	C:\Windows\syswow64\NSI.dll
+0x73330000 - 0x73362000 	C:\Windows\system32\WINMM.dll
+0x74ea0000 - 0x74ea5000 	C:\Windows\syswow64\PSAPI.DLL
+0x6a430000 - 0x6a43c000 	C:\Program Files (x86)\Java\jre7\bin\verify.dll
+0x6a410000 - 0x6a430000 	C:\Program Files (x86)\Java\jre7\bin\java.dll
+0x6a3f0000 - 0x6a403000 	C:\Program Files (x86)\Java\jre7\bin\zip.dll
+0x68c70000 - 0x68db2000 	C:\Program Files (x86)\Java\jre7\bin\awt.dll
+0x74c60000 - 0x74cef000 	C:\Windows\syswow64\OLEAUT32.dll
+0x76620000 - 0x7677c000 	C:\Windows\syswow64\ole32.dll
+0x71cf0000 - 0x71d03000 	C:\Windows\system32\DWMAPI.DLL
+0x71c40000 - 0x71cc0000 	C:\Windows\system32\uxtheme.dll
+0x75620000 - 0x76269000 	C:\Windows\syswow64\SHELL32.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: run
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=.;C:\Program Files (x86)\Java\jre6\lib\ext\QTJava.zip
+PATH=C:/Program Files (x86)/Java/jre7/bin/client;C:/Program Files (x86)/Java/jre7/bin;C:/Program Files (x86)/Java/jre7/lib/i386;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\QuickTime\QTSystem\;;C:\Motion-Twin\haxe\;C:\Motion-Twin\neko;C:\eclipse;
+USERNAME=Ben
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 28 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7600 
+
+CPU:total 2 (1 cores per cpu, 2 threads per core) family 6 model 28 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, ht
+
+Memory: 4k page, physical 2084760k(690856k free), swap 2818460k(4536k free)
+
+vm_info: Java HotSpot(TM) Client VM (22.0-b10) for windows-x86 JRE (1.7.0_02-b13), built on Nov 17 2011 17:17:32 by "java_re" with unknown MS VC++:1600
+
+time: Sat Dec 24 12:56:20 2011
+elapsed time: 1 seconds
+

@@ -1,0 +1,1 @@
+This is a simple lightweight ASCII to Binary and Binary to ASCII converter. I have a wrapped jar for windows users and a jar for the rest.
