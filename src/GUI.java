@@ -44,7 +44,7 @@ public class GUI extends JFrame {
 				"C:\\Users\\Ben\\workspace\\ASCII converter\\src\\ASCII Binary Converter Icon.png")
 				.getImage());
 		setSize(330, 78);
-		try {
+		/*try {
 			// Set System L&F
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (UnsupportedLookAndFeelException e) {
@@ -55,7 +55,7 @@ public class GUI extends JFrame {
 			// handle exception
 		} catch (IllegalAccessException e) {
 			// handle exception
-		}
+		}*/
 
 		mainField = new JTextField("Enter binary or text here!");
 		mainField.setBounds(0, 20, 330, 20);
