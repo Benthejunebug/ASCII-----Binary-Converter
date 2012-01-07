@@ -205,7 +205,7 @@ public class GUI extends JFrame {
 		int noButtonsNoResultsHeight = 78;
 		// Sets the height in which the window will not collapse after pressing
 		// btnX
-		int collapseOnTextFieldCloseHeightRange = 70;
+		int collapseOnTextFieldCloseHeightRange = 700;
 		if (resized) {
 			width = getWidth();
 		} else {
