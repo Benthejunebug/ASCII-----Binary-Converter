@@ -61,9 +61,7 @@ public class GUI extends JFrame {
 			public void componentShown(ComponentEvent arg0) {
 			}
 		});
-
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLocationRelativeTo(null);
 		getContentPane().setLayout(null);
 
 		// Set System L&F
@@ -181,6 +179,7 @@ public class GUI extends JFrame {
 		});
 		setJFrameSize();
 		setBounds();
+		setLocationRelativeTo(null);
 		setVisible(true);
 	}
 
@@ -276,6 +275,7 @@ public class GUI extends JFrame {
 				(JFrameWidth - ((getOS().equals("Windows") ? 4 : 2) * textAreaSideMargin))
 						- btnX.getWidth(), JFrameHeight - textAreaSouthMargin
 						+ textAreaNorthMargin, 39, 23);
+		getContentPane().repaint();
 	}
 
 	// Adds toBinary and toASCII to the JFrame
